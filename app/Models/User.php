@@ -44,4 +44,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     *
+     * All absences for this user
+     */
+    public function absences(){
+        return $this->hasMany(UserAbsences::class, 'user_id');
+    }
 }
