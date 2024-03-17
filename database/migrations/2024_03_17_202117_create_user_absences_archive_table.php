@@ -11,18 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_absences', function (Blueprint $table) {
+        Schema::create('user_absences_archive', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->integer('absence_type');
             $table->date('absence_from');
             $table->date('absence_to');
-            $table->integer('count');
-            $table->tinyInteger('archived')->default(0);
             $table->timestamps();
-            $table->softDeletes();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_absences');
+        Schema::dropIfExists('user_absences_archive');
     }
 };

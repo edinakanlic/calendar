@@ -29,6 +29,17 @@
         @include('elements.calendar_table')
     </div>
 
+    <div class="header-calendar mt-5">
+        <div></div>
+
+        <div>
+            <button onclick="storeInArchive()" class="btn btn-primary tiles-button">
+                <span class="bold">Sačuvaj u arhivi</span>
+            </button>
+        </div>
+
+    </div>
+
 
 
 </div>

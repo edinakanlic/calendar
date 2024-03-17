@@ -3,20 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class UserAbsences extends Model
+class UserAbsencesArchive extends Model
 {
 
-    use SoftDeletes;
-
+    public $table = "user_absences_archive";
+    
     protected $fillable = [
         'user_id',
         'absence_type',
         'absence_from',
-        'absence_to',
-        'count',
-        'archived',
+        'absence_to'
     ];
-
 }

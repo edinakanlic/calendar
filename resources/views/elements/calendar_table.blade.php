@@ -14,7 +14,11 @@
                     <td>
                         {{ $day['day'] }}
                         <br>
-                        <span id="absence_{{ $day['day'] }}">{{ $day['absence'] }}</span>
+                        @if ($day['archived'] == 0)
+                            <span id="absence_{{ $day['day'] }}">{{ $day['absence'] }}</span>
+                        @else
+                            <span id="absence_{{ $day['day'] }}" class="archived">{{ $day['absence'] }} (arhivirano)</span>
+                        @endif
                     </td>
                 @endforeach
             </tr>

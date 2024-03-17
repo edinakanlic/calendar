@@ -8,14 +8,19 @@
 
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="{{ $modalIdPrefix }}ModalLabel">Registrovanje odsustva</h5>
+                <h5 class="modal-title bold" id="{{ $modalIdPrefix }}ModalLabel">Registrovanje odsustva</h5>
             </div>
 
             <div class="modal-body">
 
                 <div class="form-group">
-                    <label class="" for="absence_date">Datum:</label>
-                    <input type="text" name="absence_date" class="form-control" value="">
+                    <label class="" for="absence_from">Od:</label>
+                    <input type="text" name="absence_from" class="form-control" value="">
+                </div>
+
+                <div class="form-group">
+                    <label class="" for="absence_to">Do:</label>
+                    <input type="text" name="absence_to" class="form-control" value="">
                 </div>
 
                 <div class="form-group">
@@ -31,7 +36,7 @@
             </div>
 
             <div class="footer">
-                <button type="button" class="btn positive btn-primary tiles-button" onclick="{{ $confirmAction }}">{{ $confirmButton }}</button>
+                <button type="submit" class="btn positive btn-primary tiles-button" onclick="{{ $confirmAction }}">{{ $confirmButton }}</button>
             </div>
         </div>
     </div>
